@@ -1,0 +1,11 @@
+C:\Users\Madelen\Documents\Visual Studio 2017\Projects\oop19\oop19\bin\Debug\netcoreapp2.1\oop19.deps.json
+C:\Users\Madelen\Documents\Visual Studio 2017\Projects\oop19\oop19\bin\Debug\netcoreapp2.1\oop19.runtimeconfig.json
+C:\Users\Madelen\Documents\Visual Studio 2017\Projects\oop19\oop19\bin\Debug\netcoreapp2.1\oop19.runtimeconfig.dev.json
+C:\Users\Madelen\Documents\Visual Studio 2017\Projects\oop19\oop19\bin\Debug\netcoreapp2.1\oop19.dll
+C:\Users\Madelen\Documents\Visual Studio 2017\Projects\oop19\oop19\bin\Debug\netcoreapp2.1\oop19.pdb
+C:\Users\Madelen\Documents\Visual Studio 2017\Projects\oop19\oop19\obj\Debug\netcoreapp2.1\oop19.csproj.CoreCompileInputs.cache
+C:\Users\Madelen\Documents\Visual Studio 2017\Projects\oop19\oop19\obj\Debug\netcoreapp2.1\oop19.AssemblyInfoInputs.cache
+C:\Users\Madelen\Documents\Visual Studio 2017\Projects\oop19\oop19\obj\Debug\netcoreapp2.1\oop19.AssemblyInfo.cs
+C:\Users\Madelen\Documents\Visual Studio 2017\Projects\oop19\oop19\obj\Debug\netcoreapp2.1\oop19.dll
+C:\Users\Madelen\Documents\Visual Studio 2017\Projects\oop19\oop19\obj\Debug\netcoreapp2.1\oop19.pdb
+C:\Users\Madelen\Documents\Visual Studio 2017\Projects\oop19\oop19\obj\Debug\netcoreapp2.1\oop19.csprojAssemblyReference.cache
