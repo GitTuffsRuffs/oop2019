@@ -61,7 +61,38 @@ namespace oop19
             SpaceInvader();
             */
 
+            /* Exercise 11 (p)
+            Console.WriteLine(CalculateString("1+2 * 3"));
+            Console.WriteLine(CalculateString("9/3/3"));
+            Console.WriteLine(CalculateString("4 - 50 * 3 + 200 + 18 / 4"));
+            */
 
+            /* Exercise 12 (p)
+            
+            var block = new int[,] {
+                { 0, 0, 0 },
+                { 1, 1, 1 },
+                { 0, 1, 0 },
+            };
+
+            PrintBlock(block);
+  
+            Console.WriteLine();
+            block = RotateRight(block);
+            PrintBlock(block);
+
+            Console.WriteLine();
+            block = RotateRight(block);
+            PrintBlock(block);
+
+            Console.WriteLine();
+            block = RotateRight(block);
+            PrintBlock(block);
+
+            Console.WriteLine();
+            block = RotateRight(block);
+            PrintBlock(block);
+            */
 
             Console.ReadKey();
         }
@@ -376,7 +407,7 @@ namespace oop19
             }
 
             //Foot
-            for (i = 1; i <= number -2; i++)
+            for (i = 1; i <= number - 2; i++)
             {
                 Console.Write(" ");
             }
@@ -388,10 +419,10 @@ namespace oop19
             int number = int.Parse(Console.ReadLine());
 
             //Tree
-            for(int row = 0; row < number; row++)
+            for (int row = 0; row < number; row++)
             {
-                Console.Write(new string(' ', number-row));
-                Console.Write(new string('*', row * 2 +1));
+                Console.Write(new string(' ', number - row));
+                Console.Write(new string('*', row * 2 + 1));
                 Console.WriteLine();
             }
 
@@ -420,7 +451,7 @@ namespace oop19
                     }
                 }
             }
-            Console.WriteLine("Number of land tiles in map: "+ landCount);
+            Console.WriteLine("Number of land tiles in map: " + landCount);
         }
 
         //Exercise 10
@@ -443,13 +474,13 @@ namespace oop19
 
             for (int i = 0; i < height; i++)
             {
-                for(int j = 0; j < width; j++)
+                for (int j = 0; j < width; j++)
                 {
-                    if(invader[i,j] == 0)
+                    if (invader[i, j] == 0)
                     {
                         Console.Write("  ");
                     }
-                    else if(invader[i, j] == 1)
+                    else if (invader[i, j] == 1)
                     {
                         Console.Write("**");
                     }
@@ -457,10 +488,10 @@ namespace oop19
                 Console.WriteLine("");
             }
 
-            while(true) {
+            while (true) {
                 var random = new Random();
-                
-                for(int r= 0; r < 10;  r++) {
+
+                for (int r = 0; r < 10; r++) {
                     var rand = random.Next(1, 11);
                     if (rand == 10)
                     {
@@ -470,10 +501,10 @@ namespace oop19
 
                     //Move rigt
                     System.Threading.Thread.Sleep(500);
-                    Console.MoveBufferArea(0,0, 60, 60, 1,0);
+                    Console.MoveBufferArea(0, 0, 60, 60, 1, 0);
                 }
 
-                for(int l = 0; l < 10; l++) {
+                for (int l = 0; l < 10; l++) {
                     var rand = random.Next(1, 11);
                     if (rand > 8)
                     {
@@ -491,25 +522,123 @@ namespace oop19
         }
 
         //Exercise 11
-  
-        
-        //Exercise 12
-        static void RotateLeft()
+        static float CalculateString(string formula)
         {
-            /*
-            var block = new byte[,] {
-                { 0, 0, 0 },
-                { 1, 1, 1 },
-                { 0, 1, 0 },
-            };
-            */
+            var splitAdd = formula.LastIndexOf('+');
+            var splitSub = formula.LastIndexOf('-');
+            var splitMult = formula.LastIndexOf('*');
+            var splitDiv = formula.LastIndexOf('/');
+
+            if (splitAdd > 0)
+            {
+                string string1 = formula.Substring(0, splitAdd);
+                string string2 = formula.Substring(splitAdd + 1);
+
+                //Console.WriteLine(string1 + " : " + string2);
+                return Plus(string1, string2);
+            }
+
+            if (splitSub > 0)
+            {
+                string string1 = formula.Substring(0, splitSub);
+                string string2 = formula.Substring(splitSub + 1);
+
+                //Console.WriteLine(string1 + " : " + string2);
+                return Minus(string1, string2);
+            }
+
+            if (splitMult > 0)
+            {
+                string string1 = formula.Substring(0, splitMult);
+                string string2 = formula.Substring(splitMult + 1);
+
+                //Console.WriteLine(string1 + " : " + string2);
+                return Multi(string1, string2);
+            }
+
+            if (splitDiv > 0)
+            {
+                string string1 = formula.Substring(0, splitDiv);
+                string string2 = formula.Substring(splitDiv + 1);
+
+                //Console.WriteLine(string1 + " : " + string2);
+                return Divide(string1, string2);
+            }
+
+            return float.Parse(formula);
         }
-        
-        //Exercise 13
 
+        static float Plus(string in_a, string in_b) {
+            float ut_a = CalculateString(in_a);
+            float ut_b = CalculateString(in_b);
 
+            return ut_a + ut_b;
+        }
+        static float Minus(string in_a, string in_b)
+        {
+            float ut_a = CalculateString(in_a);
+            float ut_b = CalculateString(in_b);
 
+            return ut_a - ut_b;
+        }
+        static float Multi(string in_a, string in_b)
+        {
+            float ut_a = CalculateString(in_a);
+            float ut_b = CalculateString(in_b);
 
+            return ut_a * ut_b;
+        }
+        static float Divide(string in_a, string in_b)
+        {
+            float ut_a = CalculateString(in_a);
+            float ut_b = CalculateString(in_b);
+
+            return ut_a / ut_b;
+        }
+
+        //Exercise 12
+        static int[,] RotateRight(int[,] block)
+        {
+            int[,] y = new int[3,3];
+            int[,] x = block;
+            
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    y[i,j] = x[2 - j, i];
+                }
+            }
+
+            return y;
+        }
+        static int[,] RotateLeft(int[,] block)
+        {
+            int[,] y = new int[3, 3];
+            int[,] x = block;
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    y[i, j] = x[j, 2 - i];
+                }
+            }
+
+            return y;
+        }
+        static void PrintBlock(int[,] block)
+        {
+            //--Print--//
+            for (int a = 0; a < 3; a++)
+            {
+                for (int b = 0; b < 3; b++)
+                {
+                    Console.Write(block[a, b]);
+                }
+                Console.WriteLine();
+            }
+        }
 
     }
 }
