@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace oop19
 {
@@ -6,7 +8,6 @@ namespace oop19
     {
         static void Main(string[] args)
         {
-            /*
             while(true) {
                 switch (ClassE1.ReadInt("Pick Exercise 1-13, 0 to exit."))
                 {
@@ -59,6 +60,17 @@ namespace oop19
                         break;
 
                     case 13:
+                        ClassE13 exersise13 = new ClassE13(7);
+
+                        int l = 0;
+                        int pice;
+
+                        while(l <= 200)
+                        {
+                            pice = exersise13.GenerateNewPice();
+                            Console.WriteLine(pice);
+                            l++;
+                        }
                         break;
 
                     case 0:
@@ -73,8 +85,8 @@ namespace oop19
                 Console.ReadKey();
                 Console.Clear();
             }
-            */
-
+            /*
+            
             // Exercise 12 (p)
             var block = new int[,] {
                 { 0, 0, 0 },
@@ -100,8 +112,13 @@ namespace oop19
             block = RotateRight(block);
             PrintBlock(block);
             //
+            */
 
+            Console.ReadKey();
         }
+
+
+        //---------Not done, fixe matris size----------//
 
         //Exercise 12
         static int[,] RotateRight(int[,] block)
