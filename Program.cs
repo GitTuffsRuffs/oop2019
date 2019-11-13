@@ -65,10 +65,13 @@ namespace oop19
                         int l = 0;
                         int pice;
 
-                        while(l <= 200)
+                        while(l <= 10)
                         {
-                            pice = exersise13.GenerateNewPice();
-                            Console.WriteLine(pice);
+                            for(int i = 0; i < 7; i++) { 
+                                pice = exersise13.GenerateNewPice();
+                                Console.Write(pice);
+                            }
+                            Console.WriteLine();
                             l++;
                         }
                         break;
