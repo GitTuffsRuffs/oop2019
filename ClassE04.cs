@@ -4,9 +4,9 @@ using System.Text;
 
 namespace oop19
 {
-    public class ClassE4
+    public class ClassE04
     {
-        public ClassE4()
+        public ClassE04()
         {
             FizzBuzz();
         }

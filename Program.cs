@@ -9,43 +9,43 @@ namespace oop19
         static void Main(string[] args)
         {
             while(true) {
-                switch (ClassE1.ReadInt("Pick Exercise 1-13, 0 to exit."))
+                switch (ClassE01.ReadInt("Pick Exercise 1-13, 0 to exit."))
                 {
                     //Exercise 1
                     case 1:
-                        ClassE1 exersise1 = new ClassE1();
+                        ClassE01 exersise1 = new ClassE01();
                         break;
 
                     case 2:
-                        ClassE2 exersise2 = new ClassE2();
+                        ClassE02 exersise2 = new ClassE02();
                         break;
 
                     case 3:
-                        ClassE3 exersise3 = new ClassE3();
+                        ClassE03 exersise3 = new ClassE03();
                         break;
 
                     case 4:
-                        ClassE4 exersise4 = new ClassE4();
+                        ClassE04 exersise4 = new ClassE04();
                         break;
 
                     case 5:
-                        ClassE5 exersise5 = new ClassE5();
+                        ClassE05 exersise5 = new ClassE05();
                         break;
 
                     case 6:
-                        ClassE6 exersise6 = new ClassE6();
+                        ClassE06 exersise6 = new ClassE06();
                         break;
 
                     case 7:
-                        ClassE7 exersise7 = new ClassE7();
+                        ClassE07 exersise7 = new ClassE07();
                         break;
 
                     case 8:
-                        ClassE8 exersise8 = new ClassE8();
+                        ClassE08 exersise8 = new ClassE08();
                         break;
 
                     case 9:
-                        ClassE9 exersise9 = new ClassE9();
+                        ClassE09 exersise9 = new ClassE09();
                         break;
 
                     case 10:
@@ -57,15 +57,16 @@ namespace oop19
                         break;
 
                     case 12:
+                        ClassE12 exersise12 = new ClassE12();
                         break;
 
                     case 13:
-                        ClassE13 exersise13 = new ClassE13(7);
+                        ClassE13 exersise13 = new ClassE13(7,4);
 
                         int l = 0;
                         int pice;
 
-                        while(l <= 10)
+                        while(l <= 5)
                         {
                             for(int i = 0; i < 7; i++) { 
                                 pice = exersise13.GenerateNewPice();
@@ -88,84 +89,6 @@ namespace oop19
                 Console.ReadKey();
                 Console.Clear();
             }
-            /*
-            
-            // Exercise 12 (p)
-            var block = new int[,] {
-                { 0, 0, 0 },
-                { 1, 1, 1 },
-                { 0, 1, 0 },
-            };
-
-            PrintBlock(block);
-  
-            Console.WriteLine();
-            block = RotateRight(block);
-            PrintBlock(block);
-
-            Console.WriteLine();
-            block = RotateRight(block);
-            PrintBlock(block);
-
-            Console.WriteLine();
-            block = RotateRight(block);
-            PrintBlock(block);
-
-            Console.WriteLine();
-            block = RotateRight(block);
-            PrintBlock(block);
-            //
-            */
-
-            Console.ReadKey();
         }
-
-
-        //---------Not done, fixe matris size----------//
-
-        //Exercise 12
-        static int[,] RotateRight(int[,] block)
-        {
-            int[,] y = new int[3,3];
-            int[,] x = block;
-            
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    y[i,j] = x[2 - j, i];
-                }
-            }
-
-            return y;
-        }
-        static int[,] RotateLeft(int[,] block)
-        {
-            int[,] y = new int[3, 3];
-            int[,] x = block;
-
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    y[i, j] = x[j, 2 - i];
-                }
-            }
-
-            return y;
-        }
-        static void PrintBlock(int[,] block)
-        {
-            //--Print--//
-            for (int a = 0; a < 3; a++)
-            {
-                for (int b = 0; b < 3; b++)
-                {
-                    Console.Write(block[a, b]);
-                }
-                Console.WriteLine();
-            }
-        }
-
     }
 }

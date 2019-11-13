@@ -6,9 +6,9 @@ using System.Text.RegularExpressions;
 
 namespace oop19
 {
-    public class ClassE3
+    public class ClassE03
     {
-        public ClassE3()
+        public ClassE03()
         {
             Console.WriteLine("palindrome : " + IsPalindrome("palindrome")); // fals
             Console.WriteLine("Abba : " + IsPalindrome("Abba")); // true

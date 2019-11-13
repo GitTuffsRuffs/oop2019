@@ -4,9 +4,9 @@ using System.Text;
 
 namespace oop19
 {
-    public class ClassE6
+    public class ClassE06
     {
-        public ClassE6()
+        public ClassE06()
         {
             RandomGameAI();
         }

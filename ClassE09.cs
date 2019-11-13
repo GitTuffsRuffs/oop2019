@@ -4,9 +4,9 @@ using System.Text;
 
 namespace oop19
 {
-    public class ClassE9
+    public class ClassE09
     {
-        public ClassE9()
+        public ClassE09()
         {
             IsLand();
         }

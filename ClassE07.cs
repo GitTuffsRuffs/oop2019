@@ -2,9 +2,9 @@
 
 namespace oop19
 {
-    public class ClassE7
+    public class ClassE07
     {
-        public ClassE7()
+        public ClassE07()
         {
             LoadingBarEyeRape();
         }

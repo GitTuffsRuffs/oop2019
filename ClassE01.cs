@@ -4,9 +4,9 @@ using System.Text;
 
 namespace oop19
 {
-    public class ClassE1
+    public class ClassE01
     {
-        public ClassE1() {
+        public ClassE01() {
             int x = ReadInt("Type a number: ");
             int y = ReadInt("Type another number: ");
 

@@ -4,14 +4,14 @@ using System.Text;
 
 namespace oop19
 {
-    public class ClassE2
+    public class ClassE02
     {
-        public ClassE2()
+        public ClassE02()
         {
             LeapYear();
         }
 
-        public ClassE2(int year1, int year2)
+        public ClassE02(int year1, int year2)
         {
             LeapYear(year1, year2);
         }
@@ -27,7 +27,7 @@ namespace oop19
             //Input 1
             while (true)
             {
-                inputYearStart = ClassE1.ReadInt("First year:");
+                inputYearStart = ClassE01.ReadInt("First year:");
 
                 if (inputYearStart < 0 || inputYearStart > 9999)
                 {
@@ -42,7 +42,7 @@ namespace oop19
             //Input 2
             while (true)
             {
-                inputYearEnd = ClassE1.ReadInt("Secound year:");
+                inputYearEnd = ClassE01.ReadInt("Secound year:");
 
                 if (inputYearEnd < inputYearStart || inputYearEnd > 9999)
                 {

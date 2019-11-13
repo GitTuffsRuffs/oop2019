@@ -4,9 +4,9 @@ using System.Text;
 
 namespace oop19
 {
-    public class ClassE8
+    public class ClassE08
     {
-        public ClassE8()
+        public ClassE08()
         {
             //CrissmasTree();
             CrissmasTree2();

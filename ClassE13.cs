@@ -8,15 +8,19 @@ namespace oop19
     {
         List<int> bag = new List<int>();
         Random random;
+        int pices;
+        int prioMax;
 
         //Constructorn make list
-        public ClassE13(int pices)
+        public ClassE13(int pices, int prioMax)
         {
-            FillBag(pices);
+            FillBag();
             random = new Random();
+            this.pices = pices;
+            this.prioMax = prioMax;
         }
 
-        public void FillBag(int pices)
+        public void FillBag()
         {
             for (int i = 1; i <= pices; i++)
             {
@@ -32,14 +36,14 @@ namespace oop19
             //cheek if bag is empty
             if (bag.Count < 1)
             {
-                FillBag(7);
+                FillBag();
             }
 
             //Cheek if bag is "new"
-            if (bag.Count > 6)
+            if (bag.Count >= pices)
             {
                 //Random 1-4
-                rand = random.Next(1,5);
+                rand = random.Next(1,prioMax+1);
                 bag.Remove(rand);
                 return rand;
             }
@@ -48,7 +52,7 @@ namespace oop19
                 //Bag not new, generate random pice.
                 do
                 {
-                    rand = random.Next(1, 8);
+                    rand = random.Next(1, pices+1);
 
                 } while (bag.IndexOf(rand) < 0);
 
