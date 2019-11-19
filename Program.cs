@@ -9,9 +9,9 @@ namespace oop19
         static void Main(string[] args)
         {
             while(true) {
-                switch (ClassE01.ReadInt("Pick Exercise 1-13, 0 to exit."))
+                switch (ClassE01.ReadInt("Pick Exercise: \n week1: 1-13 \n week2: 14-16 \n 0 to exit."))
                 {
-                    //Exercise 1
+                    //Exercise Week 1
                     case 1:
                         ClassE01 exersise1 = new ClassE01();
                         break;
@@ -77,6 +77,53 @@ namespace oop19
                         }
                         break;
 
+                    //Exercise week2
+                    case 14:
+                        Box box1 = new Box();
+                        Box box2 = new Box(17, 4, 13, 8, "Blue");
+
+                        box1.startPointX = 3;
+                        box1.startPointY = 2;
+                        box1.boxWidth = 7;
+                        box1.boxHeight = 4;
+                        box1.ForegroundColor = ConsoleColor.Red;
+
+                        // draw both on the screen
+                        box1.Draw();
+                        box2.Draw();
+                        break;
+
+                    case 15:
+                        var manager = new BoxManager()
+                        {
+                            boxList = new List<Box>()
+                        };
+
+                        // add a box to the list
+                        manager.boxList.Add(new Box()
+                        {
+                            boxHeight = 10,
+                            boxWidth = 20,
+                            ForegroundColor = ConsoleColor.Red,
+                        });
+
+                        // and another one
+                        manager.boxList.Add(new Box()
+                        {
+                            boxHeight = 6,
+                            boxWidth = 12,
+                            ForegroundColor = ConsoleColor.Blue,
+                        });
+
+                        //manager.listAllBoxes();
+                        manager.DrawInCenter();
+                        break;
+
+                    case 16:
+                        XScreenSaver scren = new XScreenSaver();
+                        scren.StartScrensaver();
+                        break;
+                        
                     case 0:
                         Environment.Exit(0);
                         break;

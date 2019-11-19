@@ -12,11 +12,11 @@ namespace oop19
         static void LoadingBarEyeRape()
         {
             var width = Console.WindowWidth;
+            var random = new Random();
 
             //Loop until keep presst
             while (!Console.KeyAvailable)
             {
-                var random = new Random();
                 var color = random.Next(8, 16);   // 16 is exclusive
                 Console.BackgroundColor = (ConsoleColor)color;
 
